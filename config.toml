@@ -1,7 +1,7 @@
 baseURL = "https://danhughes.io"
 languageCode = "en-gb"
 title = "Dan Hughes"
-theme = "goa"
+theme = "hugo-goa"
 
 [params]
 author = "Dan Hughes"
