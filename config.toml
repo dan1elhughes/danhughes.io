@@ -12,7 +12,7 @@ dateformat = "Jan 2, 2006"
 
 ## Extras
 [params.extra]
-copyright = "© 2019. Dan Hughes. [Some rights reserved](http://creativecommons.org/licenses/by/3.0/)."
+copyright = "© 2019 Dan Hughes. [Some rights reserved](http://creativecommons.org/licenses/by/3.0/)."
 poweredby = false
 
 [[menu.main]]
