@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 rm -r dist
-hugo
+hugo --minify
 
 read -p "Deploy (y/n)? " CONT
 if [ "$CONT" = "y" ]; then
