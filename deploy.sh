@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
-rm -r public
+rm -r dist
 hugo
-surge --domain https://danhughes.io ./public
+
+read -p "Deploy (y/n)? " CONT
+if [ "$CONT" = "y" ]; then
+	surge --domain https://danhughes.io ./dist
+else
+	echo "Skipping deploy.."
+fi

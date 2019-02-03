@@ -2,6 +2,7 @@ baseURL = "https://danhughes.io"
 languageCode = "en-gb"
 title = "Dan Hughes"
 theme = "hugo-goa"
+publishdir = "dist"
 
 [params]
 author = "Dan Hughes"
