@@ -1,0 +1,33 @@
+baseURL = "https://danhughes.io"
+languageCode = "en-gb"
+title = "Dan Hughes"
+theme = "goa"
+
+[params]
+author = "Dan Hughes"
+intro = "Full-stack web engineer"
+description = "Now @Monzo. Previously @Mirum and @Heathwallace."
+authorimage = "headshot.jpg"
+dateformat = "Jan 2, 2006"
+
+## Extras
+[params.extra]
+copyright = "© 2019. Dan Hughes. [Some rights reserved](http://creativecommons.org/licenses/by/3.0/)."
+poweredby = false
+
+[[menu.main]]
+name = "github"
+identifier = "github"
+url = "https://github.com/dan1elhughes"
+[[menu.main]]
+name = "instagram"
+identifier = "instagram"
+url = "https://instagram.com/dan1elhughes"
+[[menu.main]]
+name = "linkedin"
+identifier = "linkedin"
+url = "https://linkedin.com/in/dan1elhughes"
+[[menu.main]]
+name = "twitter"
+identifier = "twitter"
+url = "https://twitter.com/dan1elhughes"
