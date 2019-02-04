@@ -11,24 +11,17 @@ description = "Now @[Monzo](https://monzo.com/internal-product) building a scala
 authorimage = "headshot.png"
 dateformat = "Jan 2, 2006"
 
-## Extras
 [params.extra]
 copyright = "© 2019 Dan Hughes. [Some rights reserved](http://creativecommons.org/licenses/by/3.0/)."
 poweredby = false
 
 [[menu.main]]
-name = "github"
-identifier = "github"
-url = "https://github.com/dan1elhughes"
-[[menu.main]]
-name = "instagram"
-identifier = "instagram"
-url = "https://instagram.com/dan1elhughes"
-[[menu.main]]
-name = "linkedin"
-identifier = "linkedin"
-url = "https://linkedin.com/in/dan1elhughes"
-[[menu.main]]
-name = "twitter"
-identifier = "twitter"
-url = "https://twitter.com/dan1elhughes"
+name = "notes"
+identifier = "notes"
+url = "/notes"
+
+[params.social]
+github = "dan1elhughes"
+instagram = "dan1elhughes"
+linkedin = "dan1elhughes"
+twitter = "dan1elhughes"
