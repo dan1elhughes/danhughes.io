@@ -7,7 +7,7 @@ publishdir = "dist"
 [params]
 author = "Dan Hughes"
 intro = "Full-stack web engineer"
-description = "Now @Monzo. Previously @Mirum and @Heathwallace."
+description = "Now @[Monzo](https://monzo.com/internal-product) building a scalable internal operations platform and application. Previously @[Mirum](https://www.mirumagency.com/en/country/united-kingdom) and @[Heathwallace](http://www.heathwallace.com/)."
 authorimage = "headshot.png"
 dateformat = "Jan 2, 2006"
 
