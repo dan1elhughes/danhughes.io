@@ -1,0 +1,27 @@
+{
+	"name": "danhughes.io",
+	"version": "1.0.0",
+	"description": "",
+	"scripts": {
+		"start": "hugo server -D -p 3000",
+		"prestart": "npm run tay",
+		"prebuild": "npm run tay",
+		"tay": "tay -i tokens.yaml -o static/css/tokens.css",
+		"build": "bash deploy.sh"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/dan1elhughes/danhughes.io.git"
+	},
+	"keywords": [],
+	"author": "Dan Hughes",
+	"bugs": {
+		"url": "https://github.com/dan1elhughes/danhughes.io/issues"
+	},
+	"homepage": "https://github.com/dan1elhughes/danhughes.io#readme",
+	"dependencies": {
+		"js-yaml": "^3.12.1",
+		"normalize.css": "^8.0.1",
+		"tay": "^2.3.2"
+	}
+}

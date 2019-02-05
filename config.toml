@@ -2,17 +2,16 @@ baseURL = "https://danhughes.io"
 languageCode = "en-gb"
 title = "Dan Hughes"
 publishdir = "dist"
+copyright = "© 2019 Dan Hughes. [Some rights reserved](http://creativecommons.org/licenses/by/3.0/)."
 
 [params]
 author = "Dan Hughes"
-intro = "Full-stack web engineer"
-description = "Now @[Monzo](https://monzo.com/internal-product) building a scalable internal operations platform and application. Previously @[Mirum](https://www.mirumagency.com/en/country/united-kingdom) and @[Heathwallace](http://www.heathwallace.com/)."
 authorimage = "headshot.png"
 dateformat = "Jan 2, 2006"
 
-[params.extra]
-copyright = "© 2019 Dan Hughes. [Some rights reserved](http://creativecommons.org/licenses/by/3.0/)."
-poweredby = false
+[params.font]
+name = "Libre Franklin"
+weights = "300,400"
 
 [[menu.main]]
 name = "notes"

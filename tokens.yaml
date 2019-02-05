@@ -1,0 +1,11 @@
+---
+color:
+  white: white
+  blue: "#41B7D8"
+size:
+  large: 2rem
+  medium: 1rem
+  small: 0.5rem
+font:
+  base: 20px
+  multiplier: 1.33

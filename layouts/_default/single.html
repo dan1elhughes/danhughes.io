@@ -1,14 +1,6 @@
+{{/* Used for single items when no other template is provided */}}
 {{ partial "header.html" . }}
-
-{{ partial "content.html" . }}
-
-{{ if ne .Params.showcomments false }}
-
-{{ template "_internal/disqus.html" . }}
-
-{{ end }}
-
+<h2>{{ .Title }}</h2>
+{{ .Content }}
 {{ partial "menu.html" . }}
-
 {{ partial "footer.html" . }}
-
