@@ -1,5 +1,12 @@
 {{/* Used for lists when no other template is provided */}}
 {{ partial "header.html" . }}
-{{ partial "li.html" . }}
+<article>
+{{ range .Data.Pages.ByPublishDate.Reverse }}
+	<div class="item">
+		<h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+		<span>{{ .Date.Format .Site.Params.dateformat | upper }}</span>
+	</div>
+{{ end }}
+</article>
 {{ partial "menu.html" . }}
 {{ partial "footer.html" . }}

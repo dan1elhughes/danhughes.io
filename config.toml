@@ -18,8 +18,18 @@ name = "notes"
 identifier = "notes"
 url = "/notes"
 
-[params.social]
-github = "dan1elhughes"
-instagram = "dan1elhughes"
-linkedin = "dan1elhughes"
-twitter = "dan1elhughes"
+[[params.social]]
+name = "github"
+url = "https://github.com/dan1elhughes"
+
+[[params.social]]
+name = "instagram"
+url = "https://instagram.com/dan1elhughes"
+
+[[params.social]]
+name = "linkedin"
+url = "https://linkedin.com/in/dan1elhughes"
+
+[[params.social]]
+name = "twitter"
+url = "https://twitter.com/dan1elhughes"

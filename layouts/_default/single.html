@@ -1,6 +1,8 @@
 {{/* Used for single items when no other template is provided */}}
 {{ partial "header.html" . }}
+<article>
 <h2>{{ .Title }}</h2>
 {{ .Content }}
+</article>
 {{ partial "menu.html" . }}
 {{ partial "footer.html" . }}

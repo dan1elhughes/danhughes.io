@@ -1,9 +1,7 @@
 <section>
 	{{ if not .IsNode }}
-		{{ if (or (.PrevInSection) (.NextInSection)) }}
-			<p><a class="button" href="{{ .Section | relURL }}">Back to {{ .Section | lower }}</a></p>
-		{{ end }}
-		{{ else}}
+		<p><a class="button" href="{{ .Section | relURL }}">Back to {{ .Section | lower }}</a></p>
+	{{ else}}
 		<p><a class="button" href="{{ .Site.BaseURL }}">home</a></p>
 	{{ end }}
 </section>

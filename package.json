@@ -3,7 +3,7 @@
 	"version": "1.0.0",
 	"description": "",
 	"scripts": {
-		"start": "hugo server -D -p 3000",
+		"start": "hugo server --buildDrafts --buildFuture --port 3000",
 		"prestart": "npm run tay",
 		"prebuild": "npm run tay",
 		"tay": "tay -i tokens.yaml -o static/css/tokens.css",
