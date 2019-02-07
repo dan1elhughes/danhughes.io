@@ -6,7 +6,7 @@
 		"start": "hugo server --buildDrafts --buildFuture --port 3000",
 		"prestart": "npm run tay",
 		"prebuild": "npm run tay",
-		"tay": "tay -i tokens.yaml -o static/css/tokens.css",
+		"tay": "tay -i tokens.yaml -o css/tokens.css",
 		"build": "bash deploy.sh"
 	},
 	"repository": {

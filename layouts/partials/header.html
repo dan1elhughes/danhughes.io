@@ -18,18 +18,15 @@
 
 {{ range .AlternativeOutputFormats -}}
     <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">
+{{ end }}
+
+{{ range .Site.Params.Stylesheets -}}
+{{ $style := resources.Get . | toCSS | minify | fingerprint -}}
+	<link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
 {{ end -}}
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family={{ .Site.Params.Font.Name }}:{{ .Site.Params.Font.Weights }}" >
 
-<link rel="stylesheet" href="{{ "css/main.css" | absURL }}">
-<link rel="stylesheet" href="{{ "css/tokens.css" | absURL }}">
-<link rel="stylesheet" href="{{ "node_modules/normalize.css/normalize.css" | absURL }}">
-<link href="https://fonts.googleapis.com/css?family={{ .Site.Params.Font.Name }}:{{ .Site.Params.Font.Weights }}" rel="stylesheet">
-
-<style media="screen">
-	html {
-		font-family: "{{ .Site.Params.Font.Name }}";
-	}
-</style>
+<style media="screen">html { font-family: "{{ .Site.Params.Font.Name }}"; }</style>
 
 </head>
 <body lang="{{ .Site.LanguageCode }}">

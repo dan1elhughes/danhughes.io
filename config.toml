@@ -3,11 +3,18 @@ languageCode = "en-gb"
 title = "Dan Hughes"
 publishdir = "dist"
 copyright = "© 2019 Dan Hughes. [Some rights reserved](http://creativecommons.org/licenses/by/3.0/)."
+assetdir = "."
 
 [params]
 author = "Dan Hughes"
 authorimage = "headshot.png"
 dateformat = "Jan 2, 2006"
+stylesheets = [
+	"css/main.css",
+	"css/tokens.css",
+	"node_modules/normalize.css/normalize.css",
+	"node_modules/font-awesome/css/font-awesome.css"
+]
 
 [params.font]
 name = "Libre Franklin"
