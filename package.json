@@ -5,9 +5,10 @@
 	"scripts": {
 		"start": "hugo server --buildDrafts --buildFuture --port 3000",
 		"prestart": "npm run tay",
-		"prebuild": "npm run tay",
 		"tay": "tay -i tokens.yaml -o css/tokens.css",
-		"build": "bash deploy.sh"
+		"clean": "rimraf dist",
+		"prebuild": "npm run tay && npm run clean",
+		"build": "hugo --minify && surge --domain https://danhughes.io dist"
 	},
 	"repository": {
 		"type": "git",
@@ -23,5 +24,9 @@
 		"js-yaml": "^3.12.1",
 		"normalize.css": "^8.0.1",
 		"tay": "^2.3.2"
+	},
+	"devDependencies": {
+		"rimraf": "^2.6.3",
+		"surge": "^0.20.1"
 	}
 }
