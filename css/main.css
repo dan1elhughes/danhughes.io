@@ -42,8 +42,13 @@ h1 {
 	box-sizing: inherit;
 }
 
+p a {
+	text-decoration: underline;
+}
+
 a,
 a:visited {
+	text-decoration: none;
 	color: white;
 	transition: opacity 0.25s;
 }
@@ -95,10 +100,6 @@ code {
 	padding: 2rem;
 }
 
-.social span:last-of-type {
-	display: none;
-}
-
 article {
 	text-align: left;
 	margin-bottom: 4rem;
@@ -120,4 +121,20 @@ hr {
 	height: 4px;
 	border: none;
 	background: white;
+}
+
+.blogs {
+	margin-top: 4rem;
+}
+
+.social a {
+	padding: 0.33em;
+}
+
+.fa-icon {
+	display: inline-block;
+	height: 1.15rem;
+	width: 1.15rem;
+	top: 0.15rem;
+	position: relative;
 }

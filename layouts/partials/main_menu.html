@@ -1,13 +1,14 @@
 <section class="menu">
-<p class="social">
+<div class="social">
 	{{ range .Site.Params.social }}
-	<a href="{{ .url }}">{{ .name | lower }}</a>
-	<span>/</span>
+	<a href="{{ .url }}">{{ partial "fontawesome.html" .name }}</a>
 	{{ end }}
-</p>
-<p>
+</div>
+<div class="blogs">
 	{{ range sort .Site.Menus.main }}
-	<a class="button" href="{{ .URL }}">{{ .Name | lower }}</a>
+	<p>
+		<a class="button" href="{{ .URL }}">{{ .Name | lower }}</a>
+	</p>
 	{{ end }}
-</p>
+</div>
 </section>
