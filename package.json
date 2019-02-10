@@ -7,8 +7,8 @@
 		"prestart": "npm run tay",
 		"tay": "tay -i tokens.yaml -o css/tokens.css",
 		"clean": "rimraf dist",
-		"predeploy": "npm run tay && npm run clean",
-		"deploy": "hugo --minify && surge --domain https://danhughes.io dist"
+		"prepare": "npm run tay && npm run clean",
+		"deploy": "surge --domain https://danhughes.io dist"
 	},
 	"repository": {
 		"type": "git",
