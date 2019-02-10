@@ -20,6 +20,7 @@ Here, it's worth checking on GitHub/Bitbucket that the feature branch is showing
 Now that the feature branch is safely on the remote, we can rewind our local master branch as if we never committed to it:
 
 ```
+$ git checkout master
 $ git reset --hard origin/master
 ```
 
