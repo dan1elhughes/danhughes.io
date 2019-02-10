@@ -17,13 +17,17 @@
 {{ .Hugo.Generator }}
 
 {{ range .AlternativeOutputFormats -}}
-    <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">
+	<link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">
 {{ end }}
 
-{{ range .Site.Params.Stylesheets -}}
-{{ $style := resources.Get . | toCSS | minify | fingerprint -}}
-	<link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
-{{ end -}}
+{{ $options := (dict "outputStyle" "compressed" "enableSourceMap" true) }}
+{{ $style := resources.Get "css/main.scss" | toCSS $options | fingerprint -}}
+<link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
+
+{{ range .Site.Params.Unpkg.Css -}}
+	<link rel="stylesheet" href="https://unpkg.com/{{.}}" >
+{{ end }}
+
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family={{ .Site.Params.Font.Name }}:{{ .Site.Params.Font.Weights }}" >
 
 <style media="screen">html { font-family: "{{ .Site.Params.Font.Name }}"; }</style>

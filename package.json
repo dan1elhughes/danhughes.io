@@ -5,7 +5,7 @@
 	"scripts": {
 		"start": "hugo server --buildDrafts --buildFuture --port 3000",
 		"prestart": "npm run tay",
-		"tay": "tay -i tokens.yaml -o css/tokens.css",
+		"tay": "tay -i tokens.yaml -o css/_tokens.scss",
 		"clean": "rimraf dist",
 		"prepare": "npm run tay && npm run clean",
 		"deploy": "surge --domain https://danhughes.io dist"
@@ -21,10 +21,8 @@
 	},
 	"homepage": "https://github.com/dan1elhughes/danhughes.io#readme",
 	"dependencies": {
-		"highlightjs": "^9.12.0",
 		"js-yaml": "^3.12.1",
-		"normalize.css": "^8.0.1",
-		"tay": "^2.3.2"
+		"tay": "^2.3.5"
 	},
 	"devDependencies": {
 		"rimraf": "^2.6.3",

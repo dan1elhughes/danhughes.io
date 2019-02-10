@@ -9,14 +9,14 @@ assetdir = "."
 author = "Dan Hughes"
 authorimage = "headshot.png"
 dateformat = "Jan 2, 2006"
-stylesheets = [
-	"css/main.css",
-	"css/tokens.css",
-	"node_modules/normalize.css/normalize.css",
-	"node_modules/highlightjs/styles/solarized_dark.css"
+
+[params.unpkg]
+css = [
+	"normalize.css/normalize.css",
+	"highlightjs/styles/solarized-dark.css"
 ]
-javascript = [
-	"node_modules/highlightjs/highlight.pack.js"
+js = [
+	"highlightjs/highlight.pack.js"
 ]
 
 [params.font]
