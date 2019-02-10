@@ -5,7 +5,7 @@ jobs:
       - image: circleci/node:latest
     steps:
       - checkout
-      - run: "npm install"
+      - run: "npm ci"
       - run: "npm run prepare"
       - persist_to_workspace:
           root: ~/project
