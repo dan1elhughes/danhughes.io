@@ -12,7 +12,11 @@ dateformat = "Jan 2, 2006"
 stylesheets = [
 	"css/main.css",
 	"css/tokens.css",
-	"node_modules/normalize.css/normalize.css"
+	"node_modules/normalize.css/normalize.css",
+	"node_modules/highlightjs/styles/solarized_dark.css"
+]
+javascript = [
+	"node_modules/highlightjs/highlight.pack.js"
 ]
 
 [params.font]

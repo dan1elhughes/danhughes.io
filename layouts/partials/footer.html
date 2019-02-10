@@ -3,5 +3,10 @@
 <p>{{ $.Site.Copyright | markdownify }}</p>
 </footer>
 </div>
+{{ range .Site.Params.Javascript -}}
+{{ $lib := resources.Get . | fingerprint -}}
+	<script src="{{ $lib.Permalink }}" charset="utf-8"></script>
+{{ end -}}
+{{ partial "js.html" . }}
 </body>
 </html>
