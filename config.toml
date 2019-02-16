@@ -10,6 +10,9 @@ author = "Dan Hughes"
 authorimage = "headshot.png"
 dateformat = "Jan 2, 2006"
 
+[permalinks]
+notes = "/:year/:month/:title/"
+
 [params.unpkg]
 css = [
 	"normalize.css/normalize.css",
