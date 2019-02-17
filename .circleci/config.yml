@@ -29,6 +29,11 @@ jobs:
       - attach_workspace:
           at: ~/project
       - run: "npm run deploy"
+  notify:
+    docker:
+      - image: circleci/node:latest
+    steps:
+      - run: curl -sS "https://api.telegram.org/bot$TELEGRAM_API_KEY/sendMessage?chat_id=$TELEGRAM_API_CHANNEL&text=$CIRCLE_PROJECT_REPONAME%20deployed%20%28$CIRCLE_BUILD_NUM%29" > /dev/null
 
 workflows:
   version: 2
@@ -41,3 +46,6 @@ workflows:
       - deploy:
           requires:
             - compile
+      - notify:
+          requires:
+            - deploy
