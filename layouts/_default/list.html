@@ -1,10 +1,12 @@
 {{/* Used for lists when no other template is provided */}}
 {{ partial "header.html" . }}
 <article>
-{{ range .Data.Pages.ByPublishDate.Reverse }}
+{{ range .Pages }}
 	<div class="item">
 		<h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+		{{ if not .Date.IsZero }}
 		<span>{{ .Date.Format .Site.Params.dateformat | upper }}</span>
+		{{ end }}
 	</div>
 {{ end }}
 </article>
