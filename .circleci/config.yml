@@ -1,51 +1,19 @@
 version: 2
 jobs:
-  prepare:
-    docker:
-      - image: circleci/node:latest
-    steps:
-      - checkout
-      - run: "npm ci"
-      - run: "npm run prepare"
-      - persist_to_workspace:
-          root: ~/project
-          paths:
-            - .
-  compile:
+  build_deploy_notify:
     docker:
       - image: cibuilds/hugo:latest
     steps:
-      - attach_workspace:
-          at: ~/project
-      - run: "hugo --minify"
-      - persist_to_workspace:
-          root: ~/project
-          paths:
-            - .
-  deploy:
-    docker:
-      - image: circleci/node:latest
-    steps:
-      - attach_workspace:
-          at: ~/project
-      - run: "npm run deploy"
-  notify:
-    docker:
-      - image: circleci/node:latest
-    steps:
+      - checkout
+      - run: apk add --update nodejs nodejs-npm
+      - run: npm ci
+      - run: npm run prepare
+      - run: hugo --minify
+      - run: npm run deploy
       - run: curl -sS "https://api.telegram.org/bot$TELEGRAM_API_KEY/sendMessage?chat_id=$TELEGRAM_API_CHANNEL&text=$CIRCLE_PROJECT_REPONAME%20deployed%20%28$CIRCLE_BUILD_NUM%29" > /dev/null
 
 workflows:
   version: 2
   build:
     jobs:
-      - prepare
-      - compile:
-          requires:
-            - prepare
-      - deploy:
-          requires:
-            - compile
-      - notify:
-          requires:
-            - deploy
+      - build_deploy_notify
