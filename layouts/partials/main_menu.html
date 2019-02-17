@@ -1,7 +1,7 @@
 <section class="menu">
 <div class="social">
 	{{ range .Site.Params.social }}
-	<a href="{{ .url }}">{{ partial "fontawesome.html" .name }}</a>
+	<a href="{{ .url }}" rel="noopener noreferrer" target="_blank">{{ partial "fontawesome.html" .name }}</a>
 	{{ end }}
 </div>
 <div class="blogs">

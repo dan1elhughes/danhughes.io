@@ -117,8 +117,9 @@ article .item a {
 }
 
 hr {
-	width: 150px;
-	height: 4px;
+	width: 100%;
+	max-width: 150px;
+	height: 2px;
 	border: none;
 	background: white;
 }

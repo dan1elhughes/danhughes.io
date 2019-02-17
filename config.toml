@@ -7,8 +7,9 @@ assetdir = "."
 
 [params]
 author = "Dan Hughes"
-authorimage = "headshot.png"
+authorimage = "/img/headshot.png"
 dateformat = "Jan 2, 2006"
+description = "I'm a web engineer at Monzo. This is a public notebook."
 
 [permalinks]
 notes = "/:year/:month/:title/"

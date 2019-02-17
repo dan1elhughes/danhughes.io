@@ -2,36 +2,41 @@
 <html lang="{{ .Site.LanguageCode }}">
 <head>
 
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="content-type" content="text/html; charset=utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-
+<!-- Page-set redirects -->
 {{ if .Params.redirect }}<meta http-equiv="refresh" content="0;URL='{{ .Params.redirect }}'" />{{ end }}
 
-<meta name="description" content="{{ .Site.Params.meta.description }}">
+<!-- Fixed meta stuff -->
+<meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="keywords" content="{{ .Site.Params.meta.keywords }}">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<base href="{{ .Site.BaseURL }}">
+<!-- Page-dynamic meta -->
+<title>{{ if .Title }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
+<meta name="description" content="{{ if .Summary }}{{ .Summary }}{{ else }}{{ .Site.Params.Description }}{{ end }}">
+<link rel="icon" type="image/png" href="{{ if .Params.Icon }}{{ .Params.Icon }}{{ else }}{{ .Site.Params.Authorimage }}{{ end }}" />
 
-<title>{{ .Site.Title }}</title>
-
+<!-- Auto-generated Hugo generated-by tags -->
 {{ .Hugo.Generator }}
 
+<!-- RSS feed support -->
 {{ range .AlternativeOutputFormats -}}
 	<link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">
 {{ end }}
 
-{{ $options := (dict "outputStyle" "compressed" "enableSourceMap" true) }}
-{{ $style := resources.Get "css/main.scss" | toCSS $options | fingerprint -}}
-<link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
-
+<!-- External CSS dependencies -->
 {{ range .Site.Params.Unpkg.Css -}}
 	<link rel="stylesheet" href="https://unpkg.com/{{.}}" >
 {{ end }}
 
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family={{ .Site.Params.Font.Name }}:{{ .Site.Params.Font.Weights }}" >
+<!-- Compiled sass output -->
+{{ $options := (dict "outputStyle" "compressed" "enableSourceMap" true) }}
+{{ $style := resources.Get "css/main.scss" | toCSS $options | fingerprint -}}
+<link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
 
+<!-- Google fonts -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family={{ .Site.Params.Font.Name }}:{{ .Site.Params.Font.Weights }}" >
 <style media="screen">html { font-family: "{{ .Site.Params.Font.Name }}"; }</style>
 
 </head>
