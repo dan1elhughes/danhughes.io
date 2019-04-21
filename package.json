@@ -21,12 +21,12 @@
 	},
 	"homepage": "https://github.com/dan1elhughes/danhughes.io#readme",
 	"dependencies": {
-		"js-yaml": "^3.12.1",
+		"js-yaml": "^3.13.1",
 		"tay": "^2.3.5"
 	},
 	"devDependencies": {
-		"opn-cli": "^4.0.0",
+		"opn-cli": "^4.1.0",
 		"rimraf": "^2.6.3",
-		"surge": "^0.20.1"
+		"surge": "^0.20.3"
 	}
 }
