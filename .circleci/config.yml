@@ -12,7 +12,9 @@ jobs:
       - run: npm run prepare
       - run: hugo --minify
       - run: npm run deploy
-      - slack/status
+      - slack/status:
+          success_message: "$CIRCLE_PROJECT_REPONAME deployed"
+          include_visit_job_action: false
 
 workflows:
   version: 2
