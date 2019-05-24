@@ -3,6 +3,7 @@ orbs:
   slack: circleci/slack@2.5.1
 jobs:
   build_deploy_notify:
+    context: slack-pushbot
     docker:
       - image: cibuilds/hugo:latest
     steps:
@@ -12,8 +13,7 @@ jobs:
       - run: npm run prepare
       - run: hugo --minify
       - run: npm run deploy
-      - slack/status:
-          context: slack-pushbot
+      - slack/status
 
 workflows:
   version: 2
