@@ -1,4 +1,6 @@
 version: 2
+orbs:
+  slack: circleci/slack@2.5.1
 jobs:
   build_deploy_notify:
     docker:
@@ -10,7 +12,8 @@ jobs:
       - run: npm run prepare
       - run: hugo --minify
       - run: npm run deploy
-      - run: curl -sS "https://api.telegram.org/bot$TELEGRAM_API_KEY/sendMessage?chat_id=$TELEGRAM_API_CHANNEL&text=$CIRCLE_PROJECT_REPONAME%20deployed%20%28$CIRCLE_BUILD_NUM%29" > /dev/null
+      - slack/status:
+          context: slack-pushbot
 
 workflows:
   version: 2
