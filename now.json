@@ -4,9 +4,9 @@
   "alias": "danhughes.io",
   "builds": [
     {
-      "src": ".build/build.sh",
+      "src": "build.sh",
       "use": "@now/static-build",
-      "config": { "distDir": "./dist" }
+      "config": { "distDir": "dist" }
     }
   ]
 }
