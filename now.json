@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "name": "danhughes.io",
+  "builds": [
+    {
+      "src": ".build/build.sh",
+      "use": "@now/static-build",
+      "config": { "distDir": "dist" }
+    }
+  ]
+}

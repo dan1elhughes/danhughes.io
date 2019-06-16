@@ -1,32 +1,27 @@
 {
-	"name": "danhughes.io",
-	"version": "1.0.0",
-	"description": "",
-	"scripts": {
-		"start": "hugo server --buildDrafts --buildFuture --port 3000",
-		"prestart": "npm run tay && opn http://localhost:3000",
-		"tay": "tay -i tokens.yaml -o css/_tokens.scss",
-		"clean": "rimraf dist",
-		"prepare": "npm run tay && npm run clean",
-		"deploy": "surge --domain https://danhughes.io dist"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/dan1elhughes/danhughes.io.git"
-	},
-	"keywords": [],
-	"author": "Dan Hughes",
-	"bugs": {
-		"url": "https://github.com/dan1elhughes/danhughes.io/issues"
-	},
-	"homepage": "https://github.com/dan1elhughes/danhughes.io#readme",
-	"dependencies": {
-		"js-yaml": "^3.13.1",
-		"tay": "^2.3.5"
-	},
-	"devDependencies": {
-		"opn-cli": "^4.1.0",
-		"rimraf": "^2.6.3",
-		"surge": "^0.20.3"
-	}
+  "name": "danhughes.io",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "hugo server --buildDrafts --buildFuture --port 3000",
+    "prestart": "npm run tay && opn http://localhost:3000",
+    "tay": "tay -i tokens.yaml -o css/_tokens.scss"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dan1elhughes/danhughes.io.git"
+  },
+  "keywords": [],
+  "author": "Dan Hughes",
+  "bugs": {
+    "url": "https://github.com/dan1elhughes/danhughes.io/issues"
+  },
+  "homepage": "https://github.com/dan1elhughes/danhughes.io#readme",
+  "dependencies": {
+    "js-yaml": "^3.13.1",
+    "tay": "^2.3.5"
+  },
+  "devDependencies": {
+    "opn-cli": "^4.1.0"
+  }
 }
