@@ -4,8 +4,9 @@
   "description": "",
   "scripts": {
     "start": "hugo server --buildDrafts --buildFuture --port 3000",
+    "build": "hugo --minify",
     "prestart": "npm run tay && opn http://localhost:3000",
-    "tay": "tay -i tokens.yaml -o css/_tokens.scss"
+    "tay": "tay -i tokens.yaml -o css/tokens.css"
   },
   "repository": {
     "type": "git",
