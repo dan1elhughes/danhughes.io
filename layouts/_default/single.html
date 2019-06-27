@@ -1,8 +1,7 @@
-{{/* Used for single items when no other template is provided */}}
-{{ partial "header.html" . }}
+{{ define "main" }}
 <article>
-<h2>{{ .Title }}</h2>
-{{ .Content }}
+  <h2>{{ .Title }}</h2>
+  {{ .Content }}
+  <p><a class="button" href="/notes">Back to Notes</a></p>
 </article>
-{{ partial "menu.html" . }}
-{{ partial "footer.html" . }}
+{{ end }}

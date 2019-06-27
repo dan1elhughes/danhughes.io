@@ -1,5 +1,5 @@
-{{ partial "header.html" . }}
-{{ partial "avatar.html" . }}
-{{ .Content }}
-{{ partial "main_menu.html" . }}
-{{ partial "footer.html" . }}
+{{ define "main" }}
+<p><img src="/img/headshot.png" class="avatar" /></p>
+{{ .Content }} <br />
+<p><a class="button" href="/notes">Notes</a></p>
+{{ end }}
