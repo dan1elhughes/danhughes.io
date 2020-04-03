@@ -8,6 +8,7 @@
     "tay": "tay -i tokens.yaml -o css/_tokens.scss",
     "clean": "rimraf dist",
     "prepare": "npm run tay && npm run clean",
+    "predeploy": "mkdir dist && hugo --minify",
     "deploy": "surge --domain https://danhughes.io dist"
   },
   "repository": {
