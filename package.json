@@ -6,9 +6,9 @@
     "start": "hugo server --buildDrafts --buildFuture --port 3000",
     "prestart": "npm run tay && opn http://localhost:3000",
     "tay": "tay -i tokens.yaml -o css/_tokens.scss",
-    "clean": "rimraf dist",
+    "clean": "rimraf dist && mkdir dist",
     "prepare": "npm run tay && npm run clean",
-    "predeploy": "mkdir dist && hugo --minify",
+    "predeploy": "npm run prepare && hugo --minify",
     "deploy": "surge --domain https://danhughes.io dist"
   },
   "repository": {

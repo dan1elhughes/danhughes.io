@@ -115,6 +115,13 @@ $ python upload.py images/*
 # python: Argument list too long
 ```
 
+> Update, July 2020: It looks like the function to read the API token out of the page has broken in this python script. To work around this, you can yolo it and replace the function. You should then get the Argument list error above.
+
+```python
+def _fetch_api_token(session):
+    return "xoxs-..." # The same API token as earlier
+```
+
 OK, that didn't work. I guess either this script or python itself has an upper limit on arguments - either way, it's relatively straightforward to just move each file into a directory based on the first character of the name.
 
 First, let's make the directories:
