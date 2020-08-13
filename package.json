@@ -5,7 +5,7 @@
   "scripts": {
     "start": "hugo server --buildDrafts --buildFuture --port 3000",
     "prestart": "npm run tay && opn http://localhost:3000",
-    "tay": "tay -i tokens.yaml -o css/_tokens.scss",
+    "tay": "tay -i tokens.yaml -o css/variables.css",
     "clean": "rimraf dist && mkdir dist",
     "prepare": "npm run tay && npm run clean",
     "build": "npm run prepare && hugo -d public --minify"

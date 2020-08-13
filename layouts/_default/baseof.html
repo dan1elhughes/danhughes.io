@@ -42,14 +42,11 @@
     <link rel="stylesheet" href="https://unpkg.com/{{.}}" />
     {{ end }}
 
-    <!-- Compiled sass output -->
-    {{ $options := (dict "outputStyle" "compressed" "enableSourceMap" true) }}
-    {{ $style := resources.Get "css/main.scss" | toCSS $options | fingerprint }}
-    <link
-      rel="stylesheet"
-      href="{{ $style.Permalink }}"
-      integrity="{{ $style.Data.Integrity }}"
-    />
+    {{ $cssVariables := resources.Get "css/variables.css" | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $cssVariables.RelPermalink }}" integrity="{{ $cssVariables.Data.Integrity }}" />
+
+    {{ $cssMain := resources.Get "css/main.css" | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $cssMain.RelPermalink }}" integrity="{{ $cssMain.Data.Integrity }}" />
 
     <!-- Google fonts -->
     <link
