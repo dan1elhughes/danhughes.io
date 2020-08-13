@@ -37,6 +37,9 @@
     />
     {{ end }}
 
+    <!-- Analytics -->
+    <script async defer data-domain="danhughes.dev" src="https://plausible.io/js/plausible.js"></script>
+
     <!-- External CSS dependencies -->
     {{ range .Site.Params.Unpkg.Css -}}
     <link rel="stylesheet" href="https://unpkg.com/{{.}}" />
