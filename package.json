@@ -8,7 +8,7 @@
     "tay": "tay -i tokens.yaml -o css/_tokens.scss",
     "clean": "rimraf dist && mkdir dist",
     "prepare": "npm run tay && npm run clean",
-    "build": "npm run prepare && hugo --minify"
+    "build": "npm run prepare && hugo -d public --minify"
   },
   "repository": {
     "type": "git",
