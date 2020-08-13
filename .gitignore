@@ -1,5 +1,5 @@
-/css/_tokens.scss
-/dist
+/css/variables.css
+/public
 /resources
 /node_modules
 .DS_Store
