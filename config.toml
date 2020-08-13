@@ -1,7 +1,7 @@
 baseURL = "https://danhughes.io"
 languageCode = "en-gb"
 title = "Dan Hughes"
-publishdir = "dist"
+publishdir = "public"
 copyright = "© 2019 Dan Hughes. [Some rights reserved](http://creativecommons.org/licenses/by/3.0/)."
 assetdir = "."
 

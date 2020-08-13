@@ -6,9 +6,9 @@
     "start": "hugo server --buildDrafts --buildFuture --port 3000",
     "prestart": "npm run tay && opn http://localhost:3000",
     "tay": "tay -i tokens.yaml -o css/variables.css",
-    "clean": "rimraf dist && mkdir dist",
+    "clean": "rimraf public && mkdir public",
     "prepare": "npm run tay && npm run clean",
-    "build": "npm run prepare && hugo -d public --minify"
+    "build": "npm run prepare && hugo --minify"
   },
   "repository": {
     "type": "git",
